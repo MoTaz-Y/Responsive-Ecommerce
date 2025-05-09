@@ -27,3 +27,13 @@ SmallImg[2].onclick = function () {
 SmallImg[3].onclick = function () {
   MainImg.src = SmallImg[3].src;
 };
+
+const navlinks = document.querySelectorAll('#navbar li');
+navlinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    navlinks.forEach((link) => {
+      link.classList.remove('active');
+    });
+    link.classList.add('active');
+  });
+});
